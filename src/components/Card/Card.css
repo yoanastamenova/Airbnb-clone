@@ -1,0 +1,31 @@
+.card {
+    width: 170px;
+    font-size: 12px;
+}
+
+.card--image {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 0.90rem;
+    font-weight: normal;
+}
+.star {
+    height: 14px;
+}
+
+.gray {
+    color: gray;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 0.90rem;
+}
