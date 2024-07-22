@@ -38,7 +38,7 @@ export default [
       rating: 4.8,
       reviewCount: 2,
     },
-    location: "Norway",
+    location: "Valencia",
     openSpots: 3,
   },
   {
@@ -80,7 +80,7 @@ export default [
       rating: 4.7,
       reviewCount: 30,
     },
-    location: "Italy",
+    location: "Online",
     openSpots: 8,
   },
   {
@@ -109,6 +109,6 @@ export default [
       reviewCount: 8,
     },
     location: "Chile",
-    openSpots: 12,
+    openSpots: 0,
   },
 ];

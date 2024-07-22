@@ -7,6 +7,8 @@ export const Card = (props) => {
     badgeText = "SOLD OUT";
   } else if (props.location === "Online") {
     badgeText = "ONLINE";
+  } else if (props.openSpots < 5) {
+    badgeText = "LAST SPOTS"
   }
   return (
     <div className="card">
