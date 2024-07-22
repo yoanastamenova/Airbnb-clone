@@ -1,20 +1,27 @@
-import React from 'react'
-import katie from '../../img/katie-zaferes.png'
-import star from '../../img/star.png'
-import './Card.css'
+import React from "react";
+import star from "../../img/star.png"
 
 export const Card = (props) => {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
-    <div className='card'>
-        <img src={katie} className='card--img'/>
-        <div className='card--stats'>
-            <img src={star} className='star'/>
-            <span>5.0 </span>
-            <span className='gray'>  (6) · </span>
-            <span className='gray'>USA</span>
-        </div>
-        <h2>Life Lessons with Katie Zaferes</h2>
-        <p><span className='bold'>From 136$ </span>/ person</p>
+    <div className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img src={new URL(`../../img/${props.img}`, import.meta.url).href} className="card--image" />
+      <div className="card--stats">
+        <img src={star} className="card--star" />
+        <span>{props.stats.rating}</span>
+        <span className="gray">({props.stats.reviewCount}) • </span>
+        <span className="gray">{props.location}</span>
+      </div>
+      <p className="card--title">{props.title}</p>
+      <p className="card--price">
+        <span className="bold">From ${props.price}</span> / person
+      </p>
     </div>
-  )
+  );
 }

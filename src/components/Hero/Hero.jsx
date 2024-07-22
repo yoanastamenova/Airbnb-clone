@@ -1,6 +1,5 @@
 import React from 'react'
 import group from '../../img/Group 77.png'
-import './Hero.css'
 
 export const Hero = () => {
   return (
